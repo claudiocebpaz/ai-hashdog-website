@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* Custom design tokens for Apple-like aesthetic */
+@theme {
+  --font-sans: InterVariable, sans-serif;
+  --font-sans--font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  --color-brand-primary: #f85d5d; /* new primary color */
+
+  /* Custom colors */
+  --color-porcelain: #f8f9fa;
+  --color-paper: #ffffff;
+  --color-ink: #1a1a1a;
+  --color-slate: #64748b;
+  --color-ion: #3b82f6;
+
+  /* Custom border radius */
+  --radius-xl2: 1.5rem;
+
+  /* Custom shadows */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Set Inter as default font for entire page */
+body {
+  font-family: var(--font-sans);
+}
+
+/* Custom utility classes */
+.bg-porcelain {
+  background-color: var(--color-porcelain);
+}
+
+.bg-paper {
+  background-color: var(--color-paper);
+}
+
+.text-ink {
+  color: var(--color-ink);
+}
+
+.text-slate {
+  color: var(--color-slate);
+}
+
+.text-brand-primary {
+  color: var(--color-brand-primary);
+}
+
+.bg-ion {
+  background-color: var(--color-ion);
+}
+
+.bg-brand-primary {
+  background-color: var(--color-brand-primary);
+}
+
+.rounded-xl2 {
+  border-radius: var(--radius-xl2);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
