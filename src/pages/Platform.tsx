@@ -1,28 +1,62 @@
+import { motion } from "motion/react";
+
 export default function Platform() {
   return (
     <div className="min-h-screen bg-paper pt-16">
       <div className="max-w-4xl mx-auto px-6 py-16">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-ink mb-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-ink mb-6"
+          >
             The Platform that thinks with you.
-          </h1>
-          <p className="text-xl text-slate mb-8 max-w-2xl mx-auto">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-xl text-slate mb-8 max-w-2xl mx-auto"
+          >
             More than storing contacts: our Platform uses Artificial
             Intelligence to identify opportunities, automate conversations, and
             help you close deals faster.
-          </p>
-          <a
-            href="/consultation"
-            className="bg-ink text-white px-6 py-3 rounded-full text-base font-medium shadow-soft hover:shadow-glow transition-all duration-300 inline-block relative overflow-hidden group"
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="relative inline-block"
           >
-            Activate with AI
-            <span className="absolute top-1 right-1 w-1.5 h-1.5 bg-ion rounded-full shadow-glow animate-pulse"></span>
-          </a>
-        </div>
+            <a
+              href="/consultation"
+              className="bg-ink text-white px-6 py-3 rounded-full text-base font-medium shadow-soft hover:shadow-glow transition-all duration-300 inline-block relative overflow-hidden group"
+            >
+              Activate with AI
+              <span className="absolute top-1 right-1 w-1.5 h-1.5 bg-ion rounded-full shadow-glow animate-pulse"></span>
+            </a>
+          </motion.div>
+        </motion.div>
 
         {/* Smart Contacts Section */}
-        <div className="bg-porcelain p-8 rounded-xl2 shadow-soft mb-12 border border-brand-primary">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="bg-porcelain p-8 rounded-xl2 shadow-soft mb-12 border border-brand-primary"
+        >
           <h2 className="text-2xl font-semibold text-ink mb-4">
             Smart Contacts
           </h2>
@@ -36,10 +70,16 @@ export default function Platform() {
           <p className="text-ink font-medium">
             A Platform that understands your customers.
           </p>
-        </div>
+        </motion.div>
 
         {/* AI Lead Scoring Section */}
-        <div className="bg-porcelain p-8 rounded-xl2 shadow-soft mb-12 border border-brand-primary">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="bg-porcelain p-8 rounded-xl2 shadow-soft mb-12 border border-brand-primary"
+        >
           <h2 className="text-2xl font-semibold text-ink mb-4">
             AI Lead Scoring
           </h2>
@@ -51,10 +91,16 @@ export default function Platform() {
           <p className="text-ink font-medium">
             AI tells you where the opportunity is.
           </p>
-        </div>
+        </motion.div>
 
         {/* Automated Conversations Section */}
-        <div className="bg-porcelain p-8 rounded-xl2 shadow-soft mb-12 border border-brand-primary">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-porcelain p-8 rounded-xl2 shadow-soft mb-12 border border-brand-primary"
+        >
           <h2 className="text-2xl font-semibold text-ink mb-4">
             Automated Conversations
           </h2>
@@ -68,10 +114,16 @@ export default function Platform() {
           <p className="text-ink font-medium">
             Your team, powered by AI around the clock.
           </p>
-        </div>
+        </motion.div>
 
         {/* Real-Time Insights Section */}
-        <div className="bg-porcelain p-8 rounded-xl2 shadow-soft mb-12 border border-brand-primary">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          viewport={{ once: true }}
+          className="bg-porcelain p-8 rounded-xl2 shadow-soft mb-12 border border-brand-primary"
+        >
           <h2 className="text-2xl font-semibold text-ink mb-4">
             Real-Time Insights
           </h2>
@@ -81,21 +133,41 @@ export default function Platform() {
             <li>• Decisions driven by data, not guesswork.</li>
           </ul>
           <p className="text-ink font-medium">AI turns data into action.</p>
-        </div>
+        </motion.div>
 
         {/* Closing CTA */}
-        <div className="text-center mt-16">
-          <p className="text-xl text-slate mb-8 max-w-2xl mx-auto">
-            Let your Platform work on its own, while you focus on growth.
-          </p>
-          <a
-            href="/consultation"
-            className="bg-ink text-white px-6 py-3 rounded-full text-base font-medium shadow-soft hover:shadow-glow transition-all duration-300 inline-block relative overflow-hidden group"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            viewport={{ once: true }}
+            className="text-xl text-slate mb-8 max-w-2xl mx-auto"
           >
-            Try the AI Platform
-            <span className="absolute top-1 right-1 w-1.5 h-1.5 bg-ion rounded-full shadow-glow animate-pulse"></span>
-          </a>
-        </div>
+            Let your Platform work on its own, while you focus on growth.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            viewport={{ once: true }}
+            className="relative inline-block"
+          >
+            <a
+              href="/consultation"
+              className="bg-ink text-white px-6 py-3 rounded-full text-base font-medium shadow-soft hover:shadow-glow transition-all duration-300 inline-block relative overflow-hidden group"
+            >
+              Try the AI Platform
+              <span className="absolute top-1 right-1 w-1.5 h-1.5 bg-ion rounded-full shadow-glow animate-pulse"></span>
+            </a>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
