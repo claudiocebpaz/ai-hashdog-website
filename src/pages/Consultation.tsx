@@ -46,7 +46,7 @@ export default function Consultation() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-8 mb-12"
+            className="mb-12"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -63,24 +63,6 @@ export default function Consultation() {
                 <li>✓ AI implementation roadmap</li>
                 <li>✓ Customized solution design</li>
                 <li>✓ No-obligation transformation plan</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-porcelain p-6 rounded-xl shadow-soft"
-            >
-              <h2 className="text-2xl font-semibold text-ink mb-4">
-                Our Expertise
-              </h2>
-              <ul className="space-y-3">
-                <li>✓ Enterprise AI integration</li>
-                <li>✓ Predictive analytics systems</li>
-                <li>✓ Intelligent process automation</li>
-                <li>✓ AI-driven decision support</li>
               </ul>
             </motion.div>
           </motion.div>

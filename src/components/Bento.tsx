@@ -5,28 +5,28 @@ const bentoItems = [
     title: "Clarity & Confidence",
     description:
       "Transform uncertainty into clear, actionable insights with AI-powered decision support.",
-    image: "/images/clarity.jpg",
+    image: "/images/clarify.webp",
     link: "/consultation",
   },
   {
     title: "More Human Relationships",
     description:
       "Build deeper connections and more authentic interactions through AI-enhanced communication.",
-    image: "/images/relationships.jpg",
+    image: "/images/relationships.webp",
     link: "/consultation",
   },
   {
     title: "Empowered People",
     description:
       "Equip your team with AI tools that amplify their capabilities and accelerate growth.",
-    image: "/images/team.jpg",
+    image: "/images/team.webp",
     link: "/consultation",
   },
   {
     title: "Future-Proof Growth",
     description:
       "Stay ahead of market shifts with predictive analytics and strategic AI guidance.",
-    image: "/images/future.jpg",
+    image: "/images/future.webp",
     link: "/consultation",
   },
   {
@@ -71,10 +71,24 @@ export default function Bento() {
           >
             <div className="absolute inset-0 rounded-lg bg-gray-900" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-lg">
-              <div className="h-80 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                <span className="text-gray-600 text-sm">
-                  Image: {bentoItems[0].title}
-                </span>
+              <div className="h-80 relative overflow-hidden">
+                <img
+                  src={bentoItems[0].image}
+                  alt={bentoItems[0].title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = "none";
+                    const fallback =
+                      target.nextElementSibling as HTMLDivElement;
+                    if (fallback) fallback.style.display = "flex";
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400 hidden items-center justify-center">
+                  <span className="text-gray-600 text-sm">
+                    Image: {bentoItems[0].title}
+                  </span>
+                </div>
               </div>
               <div className="p-10 pt-4">
                 <h3 className="text-sm/4 font-semibold text-brand-primary">
@@ -101,10 +115,24 @@ export default function Bento() {
           >
             <div className="absolute inset-0 rounded-lg bg-gray-800" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-lg">
-              <div className="h-80 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                <span className="text-gray-600 text-sm">
-                  Image: {bentoItems[1].title}
-                </span>
+              <div className="h-80 relative overflow-hidden">
+                <img
+                  src={bentoItems[1].image}
+                  alt={bentoItems[1].title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = "none";
+                    const fallback =
+                      target.nextElementSibling as HTMLDivElement;
+                    if (fallback) fallback.style.display = "flex";
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400 hidden items-center justify-center">
+                  <span className="text-gray-600 text-sm">
+                    Image: {bentoItems[1].title}
+                  </span>
+                </div>
               </div>
               <div className="p-10 pt-4">
                 <h3 className="text-sm/4 font-semibold text-brand-primary">
@@ -131,10 +159,24 @@ export default function Bento() {
           >
             <div className="absolute inset-0 rounded-lg bg-gray-800" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-lg">
-              <div className="h-80 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                <span className="text-gray-600 text-sm">
-                  Image: {bentoItems[2].title}
-                </span>
+              <div className="h-80 relative overflow-hidden">
+                <img
+                  src={bentoItems[2].image}
+                  alt={bentoItems[2].title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = "none";
+                    const fallback =
+                      target.nextElementSibling as HTMLDivElement;
+                    if (fallback) fallback.style.display = "flex";
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400 hidden items-center justify-center">
+                  <span className="text-gray-600 text-sm">
+                    Image: {bentoItems[2].title}
+                  </span>
+                </div>
               </div>
               <div className="p-10 pt-4">
                 <h3 className="text-sm/4 font-semibold text-brand-primary">
@@ -161,10 +203,24 @@ export default function Bento() {
           >
             <div className="absolute inset-0 rounded-lg bg-gray-800" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-lg">
-              <div className="h-80 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                <span className="text-gray-600 text-sm">
-                  Image: {bentoItems[3].title}
-                </span>
+              <div className="h-80 relative overflow-hidden">
+                <img
+                  src={bentoItems[3].image}
+                  alt={bentoItems[3].title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = "none";
+                    const fallback =
+                      target.nextElementSibling as HTMLDivElement;
+                    if (fallback) fallback.style.display = "flex";
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400 hidden items-center justify-center">
+                  <span className="text-gray-600 text-sm">
+                    Image: {bentoItems[3].title}
+                  </span>
+                </div>
               </div>
               <div className="p-10 pt-4">
                 <h3 className="text-sm/4 font-semibold text-brand-primary">
@@ -191,10 +247,24 @@ export default function Bento() {
           >
             <div className="absolute inset-0 rounded-lg bg-gray-800" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-lg">
-              <div className="h-80 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                <span className="text-gray-600 text-sm">
-                  Image: {bentoItems[4].title}
-                </span>
+              <div className="h-80 relative overflow-hidden">
+                <img
+                  src={bentoItems[4].image}
+                  alt={bentoItems[4].title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = "none";
+                    const fallback =
+                      target.nextElementSibling as HTMLDivElement;
+                    if (fallback) fallback.style.display = "flex";
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400 hidden items-center justify-center">
+                  <span className="text-gray-600 text-sm">
+                    Image: {bentoItems[4].title}
+                  </span>
+                </div>
               </div>
               <div className="p-10 pt-4">
                 <h3 className="text-sm/4 font-semibold text-brand-primary">
