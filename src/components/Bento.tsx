@@ -30,10 +30,10 @@ const bentoItems = [
     link: "/consultation",
   },
   {
-    title: "Network & Infrastructure",
+    title: "Confident AI Adoption",
     description:
-      "Robust, scalable infrastructure that grows with your business needs and global demands.",
-    image: "/images/network.jpg",
+      "Adopt AI with clarity and trust — guided, seamless, and always aligned with your business goals.",
+    image: "/images/ai-adoption.webp",
     link: "/consultation",
   },
 ];
