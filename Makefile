@@ -85,7 +85,7 @@ pull:
 	@git pull
 	@echo "$(GREEN)✓ Latest changes pulled$(NC)"
 
-# Main deployment target - add, commit, and push
+# Main deployment target - add, commit, push, and verify build
 .PHONY: deploy
 deploy:
 	@echo "$(BLUE)=== Starting Deployment ===$(NC)"
@@ -99,7 +99,10 @@ deploy:
 	fi
 	@echo "$(YELLOW)3. Pushing to remote...$(NC)"
 	@git push
+	@echo "$(YELLOW)4. Verifying build...$(NC)"
+	@npm run build
 	@echo "$(GREEN)✓ Deployment completed successfully!$(NC)"
+	@echo "$(GREEN)✓ Build verification passed!$(NC)"
 
 # Clean build artifacts
 .PHONY: clean
