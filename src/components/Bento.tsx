@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 const bentoItems = [
   {
-    title: "Clarity & Confidence",
+    title: "Clarity & Growth",
     description:
       "Transform uncertainty into clear, actionable insights with AI-powered decision support.",
     image: "/images/clarify.webp",
@@ -268,7 +268,7 @@ export default function Bento() {
               </div>
               <div className="p-10 pt-4">
                 <h3 className="text-sm/4 font-semibold text-brand-primary">
-                  Network
+                  Confidence
                 </h3>
                 <p className="mt-2 text-xl font-medium tracking-tight text-white">
                   {bentoItems[4].title}
